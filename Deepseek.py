@@ -1,6 +1,7 @@
 # triangle_bybit_protected_bot.py
 import ccxt.async_support as ccxt
 import asyncio
+from dotenv import load_dotenv
 import os
 import hashlib
 import time
@@ -8,6 +9,8 @@ from datetime import datetime
 from telegram import Bot
 from telegram.constants import ParseMode
 from telegram.ext import Application
+
+load_dotenv()
 
 # === Конфигурация сети ===
 TESTNET_MODE = os.getenv("TESTNET_MODE", "true").lower() == "true"
